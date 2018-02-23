@@ -1,0 +1,30 @@
+[
+  {
+      "id":"1",
+      "movieName":"Red October",
+      "genre":"Suspense",
+      "userRating": 7,
+      "userlist": ["jason"]
+    },
+    {
+      "id":"2",
+      "movieName":"Thor",
+      "genre":"Action",
+      "userRating": 10,
+      "userlist": ["jason","dilly","bobby"]
+    },
+    {
+      "id":"3",
+      "movieName":"IT",
+      "genre":"Horror",
+      "userRating": 15,
+      "userlist": ["dilly","bobby"]
+    },
+    {
+      "id":"4",
+      "movieName":"Monty Python: Holy Grail",
+      "genre":"Comedy",
+      "userRating": 7,
+      "userlist": ["bobby"]
+    }
+]
