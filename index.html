@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Movies Topics 1-2-3-4</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -12,35 +13,28 @@
     <div class="container">
         <header>
             <h1>Movie Vault</h1>
-            <h2>Welcome to the Movie Vault , Please choose a user:</h2>
         </header>
-        <div class="movie-listings">
+        <div class="descriptive-text">
+            <h2>Please choose a user:</h2>
+        </div>
+        <div class="movie-listings box" id="movies">
             <p>List of users Movies:</p>
         </div>
-        <div class="user-list">
+        <div class="user-list box">
             <!-- Buttons -->
             <button type="button" id="Jason" class="btn">Jason</button>
             <button type="button" id="Bobby" class="btn">Bobby</button>
             <button type="button" id="Dilly" class="btn">Dilly</button>
         </div>
-        <div class="user-info"></div>
-        <div class="movie-audio-player"></div>
-        <div class="add-movies"></div>
 
-
-
-
-
-        <!-- Area for display -->
-        <div class="subHeading">
-            <br>
-
-            <br>
+        <div class="movie-audio-player box">
+            <video width="85%" height="auto" controls>
+                <source src="Thor%20-%20Trailer%20(OFFICIAL).mp4" type="video/mp4"/>
+            </video>
         </div>
+        <div class="clearfix"></div>
+        <div class="add-movies box"></div>
 
-        <div class="displayArea" id="movieDisplay">
-
-        </div>
     </div>
 
 

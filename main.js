@@ -55,7 +55,7 @@ function checkMovies(ourMovies, userSelected)
       // create table in movieDisplay
       var newTable = document.createElement("TABLE");
       newTable.setAttribute("id", "myTable");
-      document.body.appendChild(newTable);
+      document.getElementById("movies").appendChild(newTable);
       // run through ever user
       var howManyUsers = 0;
       howManyUsers = ourMovies[i].userlist.length;
