@@ -51,7 +51,9 @@ function checkMovies(ourMovies, userSelected)
       // create table in movieDisplay
       var newTable = document.createElement("TABLE");
       newTable.setAttribute("id", "myTable");
-      document.getElementById("movies").appendChild(newTable);
+      document.getElementById("movies").insertBefore(newTable, document.getElementById("insertBeforeMe"));
+
+
     // run through every movie
     for (var i = 0; i < ourMovies.length; i++)
     {
