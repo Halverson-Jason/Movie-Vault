@@ -1,7 +1,7 @@
 [
   {
       "id":"1",
-      "movieName":"Red October",
+      "movieName":"The Hunt for Red October",
       "genre":"Suspense",
       "userRating": 7,
       "userlist": ["jason"]
