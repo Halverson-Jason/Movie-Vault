@@ -4,27 +4,35 @@
       "movieName":"The Hunt for Red October",
       "genre":"Suspense",
       "userRating": 7,
-      "userlist": ["jason"]
+      "userlist": ["jason"],
+      "videoName": "october.mp4",
+      "audioName": "october.mp3"
     },
     {
       "id":"2",
       "movieName":"Thor",
       "genre":"Action",
       "userRating": 10,
-      "userlist": ["jason","dilly","bobby"]
+      "userlist": ["jason","dilly","bobby"],
+      "videoName": "thor.mp4",
+      "audioName": "thor.mp3"
     },
     {
       "id":"3",
       "movieName":"IT",
       "genre":"Horror",
       "userRating": 15,
-      "userlist": ["dilly","bobby"]
+      "userlist": ["dilly","bobby"],
+      "videoName": "it.mp4",
+      "audioName": "it.mp3"
     },
     {
       "id":"4",
       "movieName":"Monty Python: Holy Grail",
       "genre":"Comedy",
       "userRating": 7,
-      "userlist": ["bobby"]
+      "userlist": ["bobby"],
+      "videoName": "python.mp4",
+      "audioName": "python.mp3"
     }
 ]

@@ -48,14 +48,14 @@ function checkMovies(ourMovies, userSelected)
 {
   if(ourMovies.length != 0)
   {
-
-    // run through every movie
-    for (var i = 0; i < ourMovies.length; i++)
-    {
       // create table in movieDisplay
       var newTable = document.createElement("TABLE");
       newTable.setAttribute("id", "myTable");
       document.getElementById("movies").appendChild(newTable);
+    // run through every movie
+    for (var i = 0; i < ourMovies.length; i++)
+    {
+
       // run through ever user
       var howManyUsers = 0;
       howManyUsers = ourMovies[i].userlist.length;
@@ -71,8 +71,15 @@ function checkMovies(ourMovies, userSelected)
           document.getElementById("myTable").appendChild(y);
 
           var z = document.createElement("TD");
+          var a = document.createElement("a");
+          a.setAttribute("id", ourMovies[i].movieName);
+            a.setAttribute("href", "#");
+            a.setAttribute("onclick", "setMedia(\"" + ourMovies[i].videoName + "\", \"" + ourMovies[i].audioName + "\" )");
+            a.setAttribute("title", "CLICK ME");
+
           var t = document.createTextNode(ourMovies[i].movieName);
-          z.appendChild(t);
+            a.appendChild(t);
+          z.appendChild(a);
           document.getElementById(ourMovies[i].id).appendChild(z);
 
         }
@@ -80,5 +87,27 @@ function checkMovies(ourMovies, userSelected)
 
     }
   }
+
+}
+
+function MyFunction(){}
+function setMedia(videoName, audioName)
+{
+
+    var movie = document.getElementById("movie-Video");
+    var audio = document.getElementById("movie-Audio");
+
+    if (videoName == 0)
+        {
+            movie.src = "";
+            audio.src = "";
+            movie.poster = "noVideo.jpg";
+        }
+    else
+        {
+            movie.poster = "";
+            movie.src = videoName;
+            audio.src = audioName ;
+        }
 
 }

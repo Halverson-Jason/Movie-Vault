@@ -40,6 +40,11 @@ header {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .clearfix:after {
     content: "";
     display: table;
@@ -151,6 +156,7 @@ header {
 video {
     margin-left: 35px;
     margin-top: 30px;
+
 }
 
 .box-line{
@@ -172,4 +178,19 @@ height: 60px;
 audio {
     width: 420px;
     margin: 15px 35px;
+}
+
+.add-movie-input {
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, label {
+    display: block;
 }
