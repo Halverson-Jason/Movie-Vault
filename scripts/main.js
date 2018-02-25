@@ -35,7 +35,7 @@ function queryDatabase(userSelected)
   }
 
   var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'movies.json');
+  ourRequest.open('GET', '/data/movies.json');
   ourRequest.onload = function(){
     var ourMovies;
     ourMovies = JSON.parse(ourRequest.responseText);
@@ -74,7 +74,7 @@ function checkMovies(ourMovies, userSelected)
           var a = document.createElement("a");
           a.setAttribute("id", ourMovies[i].movieName);
             a.setAttribute("href", "#");
-            a.setAttribute("onclick", "setMedia(\"" + ourMovies[i].videoName + "\", \"" + ourMovies[i].audioName + "\" )");
+            a.setAttribute("onclick", "setMedia(\"/media/video/" + ourMovies[i].videoName + "\", \"/media/audio/" + ourMovies[i].audioName + "\" )");
             a.setAttribute("title", "CLICK ME");
 
           var t = document.createTextNode(ourMovies[i].movieName);
@@ -101,7 +101,7 @@ function setMedia(videoName, audioName)
         {
             movie.src = "";
             audio.src = "";
-            movie.poster = "noVideo.jpg";
+            movie.poster = "/media/img/noVideo.jpg";
         }
     else
         {
