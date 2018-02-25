@@ -79,7 +79,7 @@ header {
 .movie-listings {
     float: left;
     width: 500px;
-    height: 368px;
+    height: 370px;
 
 }
 
@@ -109,9 +109,9 @@ header {
 
 .user-list {
     width: 500px;
-    float: left;
+    margin: 0px;
     height: 60px;
-    padding-left: 5px;
+    padding: 0px;
     background-color: #344b60;
 }
 
@@ -141,22 +141,35 @@ header {
     margin: 5px 20px;
 }
 
-
-
-
 .descriptive-text {
-    margin-left: 700px;
     margin-top: 15px;
     font-size: 10px;
     text-align: center;
     width: 230px;
 }
 
-
-
-
-
 video {
     margin-left: 35px;
     margin-top: 30px;
+}
+
+.box-line{
+    width: 500px;
+    height: 5px;
+    margin: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #212121;
+    margin-bottom: 0px;
+
+}
+
+.audio-player {
+width: 500px;
+float: left;
+height: 60px;
+}
+
+audio {
+    width: 420px;
+    margin: 15px 35px;
 }
