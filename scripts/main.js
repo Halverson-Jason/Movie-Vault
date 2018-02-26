@@ -33,7 +33,7 @@ function queryDatabase(userSelected)
     table.parentNode.removeChild(table);
 
   }
-
+// AJAX / JSON
   var ourRequest = new XMLHttpRequest();
   ourRequest.open('GET', '/data/movies.json');
   ourRequest.onload = function(){
@@ -44,6 +44,8 @@ function queryDatabase(userSelected)
   ourRequest.send();
 }
 
+
+// Javascript examples , loops , conditionals ect.
 function checkMovies(ourMovies, userSelected)
 {
   if(ourMovies.length != 0)
@@ -59,6 +61,8 @@ function checkMovies(ourMovies, userSelected)
     {
 
       // run through ever user
+
+        // DOM interaction
       var howManyUsers = 0;
       howManyUsers = ourMovies[i].userlist.length;
 
@@ -92,7 +96,6 @@ function checkMovies(ourMovies, userSelected)
 
 }
 
-function MyFunction(){}
 function setMedia(videoName, audioName)
 {
 
@@ -111,5 +114,50 @@ function setMedia(videoName, audioName)
             movie.src = videoName;
             audio.src = audioName ;
         }
+
+}
+
+function submitMovie()
+{
+    saveMovie();
+}
+
+function saveMovie()
+{
+// Javascript Objects
+    var movie = {
+    movieName: document.getElementById("movieName").value,
+    movieGenre: document.getElementById("genre").value,
+    movieRating: document.getElementById("userRating").value,
+    movieUserList: document.getElementById("userList").value,
+    persistentStorage: document.getElementById("persistent").checked,
+    save: function ()
+        {
+
+            // Local storage
+
+            if(this.persistentStorage)
+                {
+                    localStorage.name = this.movieName;
+                    localStorage.genre = this.movieGenre;
+                    localStorage.rating = this.movieRating;
+                    localStorage.user = this.movieUserList;
+                    alert("Stored by simple");
+                    alert("Movie Name: " + localStorage.name);
+
+                }
+            else{
+                    sessionStorage.setItem('movieObject', JSON.stringify(this));
+                    var retrievedMovie = sessionStorage.getItem('movieObject');
+    alert("Stored by Object");
+                var parsedMovie = JSON.parse(retrievedMovie);
+                alert("Movie Name: " + parsedMovie.movieName);
+            }
+
+        }
+
+    };
+
+    movie.save();
 
 }

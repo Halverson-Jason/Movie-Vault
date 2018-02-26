@@ -33,6 +33,7 @@
             <div id="insertBeforeMe"></div>
         </div>
 
+<!--    HTML5 video and audio tags    -->
         <div class="movie-audio-player box">
             <video id="movie-Video" width="420px" height="auto" controls>
                 <source src="" type="video/mp4"/>
@@ -47,11 +48,11 @@
         <div class="add-movies box">
             <div class="add-movie-input">
                 <label for="movieName">Movie Name:</label>
-                <input type="text" name="movieName">
+                <input type="text" name="movieName" id="movieName" required>
             </div>
             <div class="add-movie-input">
                 <label for="genre">Genre:</label>
-                <select name="genre">
+                <select name="genre" id="genre">
                     <option value="action">Action</option>
                     <option value="comedy">Comedy</option>
                     <option value="horror">Horror</option>
@@ -60,7 +61,7 @@
             </div>
             <div class="add-movie-input">
                 <label for="userRating">userRating:</label>
-                <select name="userRating">
+                <select name="userRating" id="userRating">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -70,11 +71,23 @@
             </div>
             <div class="add-movie-input">
                 <label for="userList">User List to Add To:</label>
-                <select name="userList">
+                <select name="userList" id="userList">
                     <option value="jason">Jason</option>
                     <option value="bobby">Bobby</option>
                     <option value="dilly">Dilly</option>
                 </select>
+            </div>
+<!--    Click for persistent storage        -->
+            <div class="add-movie-input">
+                <label for="persistent">Local Storage</label>
+                <input type="checkbox" name="persistent" id="persistent" />
+            </div>
+
+            <div class="add-movie-input">
+                <button type="button" id="save" class="btn" onclick="saveMovie()">Save</button>
+            </div>
+            <div class="add-movie-input">
+                <button type="button" id="submit" class="btn" onclick="submitMovie()">Submit</button>
             </div>
         </div>
 
